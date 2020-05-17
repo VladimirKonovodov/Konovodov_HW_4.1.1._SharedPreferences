@@ -54,16 +54,11 @@ public class ListViewActivity extends AppCompatActivity implements SwipeRefreshL
         mSwipeRefreshLayout.setOnRefreshListener(this);
         // делаем повеселее
 
-
         //mSwipeRefreshLayout.setColorSchemeResources(R.color.blue, R.color.green, R.color.yellow, R.color.red);
 
         newPrepareContent(getPref());
         initView();
 
-        //onRefresh();
-
-
-        //prepareContent();
         simpleAdapter = (SimpleAdapter) createSimpleAdapter(mapList);
         list.setAdapter(simpleAdapter);
 
@@ -103,7 +98,6 @@ public class ListViewActivity extends AppCompatActivity implements SwipeRefreshL
             }
 
         });
-//-----------------
 
 
     }
@@ -148,8 +142,11 @@ public class ListViewActivity extends AppCompatActivity implements SwipeRefreshL
         // говорим о том, что собираемся начать
         //Toast.makeText(this, R.string.refresh_started, Toast.LENGTH_SHORT).show();
         // начинаем показывать прогресс
+
+        //
         mSwipeRefreshLayout.setRefreshing(false);
-        // ждем 3 секунды и прячем прогресс
+        mSwipeRefreshLayout.setEnabled(false);
+        // ждем 0.1 секунды и прячем прогресс
         mSwipeRefreshLayout.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -158,9 +155,10 @@ public class ListViewActivity extends AppCompatActivity implements SwipeRefreshL
                 list.setAdapter(simpleAdapter);
 
                 mSwipeRefreshLayout.setRefreshing(false);
+                mSwipeRefreshLayout.setEnabled(true);
                 // говорим о том, что собираемся закончить
                 Toast.makeText(ListViewActivity.this, R.string.refresh_finished, Toast.LENGTH_SHORT).show();
             }
-        }, 0);
+        }, 100);
     }
 }

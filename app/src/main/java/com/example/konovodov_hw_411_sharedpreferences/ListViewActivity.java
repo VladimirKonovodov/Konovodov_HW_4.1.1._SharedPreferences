@@ -1,4 +1,4 @@
-package com.example.konovodov_hw_411_sharedpreferences;
+package com.example.konovodov_hw_412_sharedpreferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;

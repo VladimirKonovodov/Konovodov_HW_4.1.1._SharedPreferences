@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Konovodov_HW_4.1.1._SharedPreferences</string>
+    <string name="app_name">Konovodov_HW_4.1.2._SharedPreferences</string>
     <string name="refresh_started">начало</string>
     <string name="refresh_finished">конец</string>
     <string name="large_text">

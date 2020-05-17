@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.konovodov_hw_411_sharedpreferences"
+        applicationId "com.example.konovodov_hw_412_sharedpreferences"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1

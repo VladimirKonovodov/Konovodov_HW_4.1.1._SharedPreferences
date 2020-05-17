@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.example.konovodov_hw_411_sharedpreferences">
+package="com.example.konovodov_hw_412_sharedpreferences">
 
     <application
         android:allowBackup="true"

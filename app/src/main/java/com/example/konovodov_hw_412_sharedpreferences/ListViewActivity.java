@@ -107,8 +107,9 @@ public class ListViewActivity extends AppCompatActivity implements SwipeRefreshL
         mapList.clear();
         for (int i = 0; i < str.split("\n\n").length; i++) {
             Map<String, String> map = new HashMap<>();
-            map.put(KEY_2, String.valueOf(str.split("\n\n")[i].length()));
             map.put(KEY_1, str.split("\n\n")[i]);
+            map.put(KEY_2, String.valueOf(str.split("\n\n")[i].length()));
+
             mapList.add(map);
         }
     }
